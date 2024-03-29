@@ -1,0 +1,41 @@
+cd <relpath>/<internal refer> -- resets filter
+new/rm [-h|--hard]
+    g[roup] <name>
+    f[ile] <relpath>/[rm]<internal refer>
+unrm f[ile] <relpath>/<internal refer>
+f[ilter] <filter>
+s[how]f[ilter]
+s[how]
+[+|-|<num>]p[ageshow]
+[+|-]<num>pz,pagesize
+m[ark]/unm[ark] (<relpath>/<internal refer>)+:<sep>
+renamer <renamer>
+with ... endwith
+showwith
+
+-- relpath
+<string>
+<raw literals that don't contain unescaped whitespace or % or <sep>>
+-- internal referrals
+%{page:d}.{id:d}
+%filtered
+-- <filter>
+<filter group>:...;
+    -- special groups
+    <num>|[A-Z] -- modifiable
+    marked
+    trashed
+    untrashed
+0 -- reset
+X -- disable
+O -- enable
+R{min_depth,max_depth} -- recursive
+(+|-)<attr>
+    r[egex]/<pat>/<flags>
+    f[uzz]/<fuzpat>/<flags>
+    d[ate](c[reated]<cmp><lit>,m[odified]<cmp><lit>)
+    t[ype].[fdx@ugs]
+-- <renamer>
+<renamer>:<command>;
+    -- special renamer
+    off

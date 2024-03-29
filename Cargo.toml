@@ -1,0 +1,12 @@
+[package]
+name = "fae"
+version = "0.0.0"
+authors = ["Tongyu (Raine) Lu <tongyul@andrew.cmu.edu>"]
+edition = "2021"
+description = "command line file manager that jumps around"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "4.5.4"
+reedline = "0.30.0"
